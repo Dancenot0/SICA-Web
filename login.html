@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingresar · SICA — Sistema de Inventario de Centros de Apoyo</title>
+  <meta name="description" content="Acceso autenticado a la plataforma SICA: inventario, beneficiarios (SIGA), priorización (Resilia) y despacho de ayuda humanitaria.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#06080b">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/landing.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="auth">
+    <section class="auth-brand" aria-label="Presentación de SICA">
+      <a class="nav-logo" href="index.html" style="position:relative;z-index:2">
+        <svg width="120" height="30" viewBox="0 0 128 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SICA — volver al inicio">
+          <defs><linearGradient id="lga" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5EEAD4"/><stop offset=".5" stop-color="#2DD4BF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+          <path d="M16 1.5 L29 8.5 V23.5 L16 30.5 L3 23.5 V8.5 Z" fill="url(#lga)" fill-opacity=".14" stroke="url(#lga)" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M16 1.5 L16 30.5 M3 8.5 L16 15.8 L29 8.5" stroke="url(#lga)" stroke-width="1.1" stroke-opacity=".55" fill="none"/>
+          <circle cx="16" cy="15.8" r="2.1" fill="#5EEAD4"/>
+          <text x="38" y="21.6" font-family="Inter,'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="700" letter-spacing=".14em" fill="#F4FAF9">SICA</text>
+        </svg>
+      </a>
+      <img class="crystal-img" src="assets/img/og-image.png" alt="" width="1024" height="1024" loading="lazy">
+      <div style="position:relative;z-index:2">
+        <h2>Una base de datos única para toda la operación.</h2>
+        <p>Inventario, padrón de beneficiarios y priorización de solicitudes trabajando sobre el mismo dato, en tiempo real.</p>
+      </div>
+      <div class="auth-quote">
+        <blockquote>En una operación humanitaria el tiempo de respuesta es parte de la ayuda misma.</blockquote>
+        <cite>— Documento de ingeniería, Proyecto SICA · Justificación</cite>
+      </div>
+    </section>
+
+    <section class="auth-panel">
+      <a class="btn btn-subtle btn-sm auth-back" href="index.html">← Volver al sitio</a>
+      <div class="auth-card glass glass-rim">
+        <h1>Iniciar sesión</h1>
+        <p class="sub">Autenticación por roles (RF-10). Cada perfil ve únicamente los módulos que le corresponden.</p>
+        <form class="auth-form" id="loginForm" novalidate>
+          <div class="field" id="fEmail">
+            <label for="email">Correo institucional</label>
+            <input class="input" id="email" type="email" autocomplete="username" placeholder="usuario@sica.org" required>
+            <span class="err">Correo o contraseña incorrectos.</span>
+          </div>
+          <div class="field" id="fPass">
+            <label for="pass">Contraseña</label>
+            <input class="input" id="pass" type="password" autocomplete="current-password" placeholder="••••••••" required>
+          </div>
+          <button class="btn btn-primary" type="submit">Entrar a la plataforma</button>
+        </form>
+        <div class="auth-demo">
+          <p><b style="color:var(--teal-300)">Credenciales de demostración</b> — contraseña <code>sica2026</code><br>
+            <code>admin@sica.org</code> · Administradora<br>
+            <code>inventario@sica.org</code> · Encargado de inventario<br>
+            <code>bodega@sica.org</code> · Bodega &nbsp;·&nbsp; <code>conductor@sica.org</code> · Conducción<br>
+            <code>donante@sica.org</code> · Organismo donante (solo lectura)</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toasts"></div>
+  <script src="assets/js/data.js"></script>
+  <script>
+    (function () {
+      const form = document.getElementById("loginForm");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const email = document.getElementById("email").value.trim().toLowerCase();
+        const pass = document.getElementById("pass").value;
+        const u = window.SICA.db.usuarios.find((x) => x.email === email && x.pass === pass);
+        if (!u) {
+          document.getElementById("fEmail").classList.add("invalid");
+          document.getElementById("email").focus();
+          return;
+        }
+        document.getElementById("fEmail").classList.remove("invalid");
+        window.SICA.session.set({ id: u.id, nombre: u.nombre, rol: u.rol, email: u.email, iniciales: u.iniciales });
+        location.href = "app/index.html";
+      });
+      document.getElementById("email").addEventListener("input", () => document.getElementById("fEmail").classList.remove("invalid"));
+    })();
+  </script>
+</body>
+</html>

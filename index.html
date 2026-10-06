@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SICA — Sistema de Inventario de Centros de Apoyo | Ayuda humanitaria trazable en tiempo real</title>
+  <meta name="description" content="SICA unifica inventario, donaciones, beneficiarios (SIGA), priorización de solicitudes (Resilia) y despacho trazable de ayuda humanitaria en una sola plataforma con base de datos única.">
+  <meta name="keywords" content="inventario humanitario, centros de acopio, ayuda humanitaria, trazabilidad, logística humanitaria, SIGA, Resilia, gestión de donaciones">
+  <meta name="author" content="Cesar Grain · Samira Naranjo · Jhon Orobio — Universidad del Pacífico">
+  <meta name="theme-color" content="#06080b">
+  <link rel="canonical" href="https://sica.example.org/">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="alternate" hreflang="es" href="https://sica.example.org/">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SICA">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="SICA — La ayuda humanitaria, trazable en tiempo real">
+  <meta property="og:description" content="Inventario, beneficiarios y despacho de ayudas en una sola plataforma. Priorización algorítmica con supervisión humana y trazabilidad completa para rendición de cuentas.">
+  <meta property="og:url" content="https://sica.example.org/">
+  <meta property="og:image" content="https://sica.example.org/assets/img/og-image.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="Cristal transparente sobre fondo oscuro con auroras teal: identidad visual de SICA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SICA — La ayuda humanitaria, trazable en tiempo real">
+  <meta name="twitter:description" content="Inventario, beneficiarios (SIGA) y priorización (Resilia) unificados con despacho trazable.">
+  <meta name="twitter:image" content="https://sica.example.org/assets/img/og-image.png">
+
+  <!-- Datos estructurados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://sica.example.org/#website",
+        "url": "https://sica.example.org/",
+        "name": "SICA — Sistema de Inventario de Centros de Apoyo",
+        "inLanguage": "es-CO",
+        "publisher": { "@id": "https://sica.example.org/#org" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://sica.example.org/#org",
+        "name": "Proyecto SICA · Universidad del Pacífico",
+        "url": "https://sica.example.org/",
+        "logo": "https://sica.example.org/assets/img/logo.svg",
+        "member": [
+          { "@type": "Person", "name": "Cesar Alberto Grain Agudelo" },
+          { "@type": "Person", "name": "Sarly Samira Naranjo Tello" },
+          { "@type": "Person", "name": "Jhon Leyner Orobio Paredes" }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "SICA — Sistema de Inventario de Centros de Apoyo",
+        "operatingSystem": "Web",
+        "applicationCategory": "BusinessApplication",
+        "description": "Plataforma unificada para control de inventarios, recepción de donaciones, registro y caracterización de beneficiarios, priorización de solicitudes de ayuda y despacho trazable de cargas humanitarias.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "COP" },
+        "featureList": [
+          "Panel de control con alertas de umbral mínimo",
+          "Inventario permanente por centro y tipo de insumo",
+          "Registro de donaciones con actualización inmediata de existencias",
+          "Listas de despacho con notificación automática a bodega y conducción",
+          "Padrón de beneficiarios SIGA",
+          "Priorización algorítmica de solicitudes Resilia",
+          "Reportes de trazabilidad exportables en PDF y Excel"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/og-image.png">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/landing.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+  <div class="ambient" aria-hidden="true"><span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <div class="container">
+      <nav class="nav-inner glass glass-rim" aria-label="Navegación principal">
+        <a class="nav-logo" href="#top" aria-label="SICA — inicio">
+          <svg width="120" height="30" viewBox="0 0 128 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SICA">
+            <defs><linearGradient id="lgn" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5EEAD4"/><stop offset=".5" stop-color="#2DD4BF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+            <path d="M16 1.5 L29 8.5 V23.5 L16 30.5 L3 23.5 V8.5 Z" fill="url(#lgn)" fill-opacity=".14" stroke="url(#lgn)" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M16 1.5 L16 30.5 M3 8.5 L16 15.8 L29 8.5" stroke="url(#lgn)" stroke-width="1.1" stroke-opacity=".55" fill="none"/>
+            <circle cx="16" cy="15.8" r="2.1" fill="#5EEAD4"/>
+            <text x="38" y="21.6" font-family="Inter,'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="700" letter-spacing=".14em" fill="#F4FAF9">SICA</text>
+          </svg>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#problema">Problema</a></li>
+          <li><a href="#ecosistema">Ecosistema</a></li>
+          <li><a href="#modulos">Módulos</a></li>
+          <li><a href="#flujo">Despacho</a></li>
+          <li><a href="#metodologia">Metodología</a></li>
+          <li><a href="#equipo">Equipo</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a class="btn btn-ghost btn-sm" href="login.html">Ingresar</a>
+          <a class="btn btn-primary btn-sm" href="login.html">Solicitar acceso</a>
+        </div>
+        <button class="nav-burger" id="burger" aria-label="Abrir menú">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow reveal in">Sistema de Inventario de Centros de Apoyo</span>
+          <h1 class="reveal in">La ayuda humanitaria, <span class="grad-text">trazable en tiempo real.</span></h1>
+          <p class="lead reveal in reveal-d1">SICA unifica inventario, donaciones, beneficiarios y despacho de cargas en una sola base de datos. Priorización algorítmica con supervisión humana y evidencia completa para quien dona y para quien espera.</p>
+          <div class="hero-actions reveal in reveal-d2">
+            <a class="btn btn-primary" href="login.html">Entrar a la plataforma
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+            <a class="btn btn-ghost" href="#flujo">Ver el flujo de despacho</a>
+          </div>
+          <div class="hero-meta reveal in reveal-d3">
+            <div><b data-count="8">0</b><span>Módulos integrados</span></div>
+            <div><b data-count="99" data-suffix="%">0</b><span>Disponibilidad objetivo</span></div>
+            <div><b data-count="2" data-prefix="<" data-suffix=" s">0</b><span>Latencia percibida</span></div>
+            <div><b data-count="100" data-suffix="%">0</b><span>Trazabilidad</span></div>
+          </div>
+        </div>
+
+        <div class="hero-shot reveal in reveal-d2">
+          <img class="crystal" src="assets/img/og-image.png" alt="" width="1024" height="1024" loading="eager">
+          <figure class="mock glass glass-rim" aria-label="Vista del panel de control de SICA">
+            <div class="mock-bar" aria-hidden="true"><i></i><i></i><i></i><span>sica.org/app — panel de control</span></div>
+            <div class="mock-body">
+              <div class="mock-kpi"><span>Unidades disponibles</span><b>7.804</b><em style="color:var(--ok-400)">▲ 12,4 %</em></div>
+              <div class="mock-kpi"><span>Alertas de umbral</span><b style="color:var(--warn-400)">3</b><em style="color:var(--ink-3)">por revisar</em></div>
+              <div class="mock-kpi"><span>Solicitudes ALTA</span><b style="color:var(--danger-400)">2</b><em style="color:var(--ink-3)">Resilia</em></div>
+              <div class="mock-chart"><span>Entradas vs. salidas · 7 días</span>
+                <svg viewBox="0 0 300 92" width="100%" height="86" aria-hidden="true">
+                  <defs><linearGradient id="mg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2DD4BF" stop-opacity=".35"/><stop offset="1" stop-color="#2DD4BF" stop-opacity="0"/></linearGradient></defs>
+                  <path d="M8 62 L50 48 L92 55 L134 34 L176 28 L218 40 L260 18 L292 24 L292 88 L8 88 Z" fill="url(#mg)"/>
+                  <path d="M8 62 L50 48 L92 55 L134 34 L176 28 L218 40 L260 18 L292 24" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M8 74 L50 70 L92 66 L134 72 L176 58 L218 64 L260 52 L292 60" fill="none" stroke="#60A5FA" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="mock-alerts"><span>Alertas activas</span>
+                <div class="mock-alert"><i style="background:var(--danger-400)"></i>Botiquines CA-01 bajo umbral</div>
+                <div class="mock-alert"><i style="background:var(--warn-400)"></i>Colchonetas CA-01 · 96/120</div>
+                <div class="mock-alert"><i style="background:var(--warn-400)"></i>Kits higiene CA-03 · 260/250</div>
+                <div class="mock-alert"><i style="background:var(--ok-400)"></i>DES-0031 en ruta notificado</div>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRUST ================= -->
+    <section class="trust" aria-label="Referentes del sector">
+      <div class="container">
+        <p class="trust-label">Diseñado conforme a referentes internacionales del sector</p>
+        <div class="trust-row reveal">
+          <span>Manual Sphere</span><span>WFP · LESS</span><span>UNHCR proGres v4</span><span>ISO/IEC 25010</span><span>ISO/IEC/IEEE 29148</span><span>UML 2.5 · OMG</span><span>RUP</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROBLEMA ================= -->
+    <section class="section" id="problema">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">El problema</span>
+          <h2>Registros dispersos cuestan entregas tardías.</h2>
+          <p>Los centros de apoyo que atienden emergencias operan con hojas de cálculo locales, cuadernos de bodega y plataformas desconectadas. Cuatro efectos se repiten en cada operación.</p>
+        </div>
+        <div class="problem-grid">
+          <article class="problem-card glass reveal"><span class="idx">01</span>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l2.5 2.5"/></svg>
+            <h3>Cuellos de botella</h3><p>La logística se coordina por canales informales, desconectados del inventario real disponible.</p></article>
+          <article class="problem-card glass reveal reveal-d1"><span class="idx">02</span>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg>
+            <h3>Trazabilidad perdida</h3><p>Sin registro centralizado y fechado de entradas y salidas, la bodega pierde historia progresivamente.</p></article>
+          <article class="problem-card glass reveal reveal-d2"><span class="idx">03</span>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/><path d="m3 3 18 18"/></svg>
+            <h3>Baja visibilidad</h3><p>Cada sede administra su información: las decisiones se toman con datos desactualizados.</p></article>
+          <article class="problem-card glass reveal reveal-d3"><span class="idx">04</span>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+            <h3>Priorización arbitraria</h3><p>Sin criterio común de urgencia, el orden de atención depende de la memoria y la presión del momento.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ECOSISTEMA ================= -->
+    <section class="section" id="ecosistema">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Ecosistema</span>
+          <h2>Tres componentes, una sola base de datos.</h2>
+          <p>La columna vertebral de la operación: sin duplicidad de captura, sin inconsistencias entre módulos, con descuento de existencias en el momento exacto del despacho.</p>
+        </div>
+        <div class="eco">
+          <article class="eco-card wide glass glass-rim sheen reveal">
+            <div>
+              <span class="eco-tag" style="color:var(--teal-300)">SICA · Base</span>
+              <h3>Gestión central de la operación humanitaria</h3>
+              <p>Centros de acopio, inventarios, donaciones, despachos y reportes sobre el mismo dato. Cada movimiento queda fechado, referenciado y auditable.</p>
+            </div>
+            <ul class="eco-list">
+              <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Inventario permanente con umbrales mínimos configurables</li>
+              <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Notificación automática a bodega y conducción</li>
+              <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reportes de trazabilidad exportables en PDF y Excel</li>
+            </ul>
+          </article>
+          <article class="eco-card glass sheen reveal reveal-d1">
+            <span class="pill pill-info eco-badge">Módulo</span>
+            <span class="eco-tag" style="color:var(--info-400)">SIGA</span>
+            <h3>Beneficiarios</h3>
+            <p>Caracterización y registro de personas y comunidades atendidas: composición, ubicación y vulnerabilidad. La base para asociar cada solicitud a quien la necesita.</p>
+          </article>
+          <article class="eco-card glass sheen reveal reveal-d2">
+            <span class="pill pill-danger eco-badge">Módulo</span>
+            <span class="eco-tag" style="color:var(--danger-400)">Resilia</span>
+            <h3>Priorización</h3>
+            <p>Algoritmo de clasificación de emergencias por nivel de urgencia —magnitud, vulnerabilidad, esencialidad y tiempo— con revisión y confirmación humana antes del despacho.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MÓDULOS ================= -->
+    <section class="section" id="modulos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Plataforma</span>
+          <h2>Ocho módulos, un solo flujo de verdad.</h2>
+          <p>Desde el ingreso de una donación hasta la rendición de cuentas sobre su distribución, con cinco perfiles de usuario y permisos diferenciados por rol.</p>
+        </div>
+        <div class="bento">
+          <article class="bento-card glass reveal"><span class="bento-code">RF-01</span>
+            <span class="bento-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+            <h3>Panel de control</h3><p>Visión global de insumos disponibles y alertas activas, filtrable por centro y tipo de insumo.</p></article>
+          <article class="bento-card glass reveal reveal-d1"><span class="bento-code">RF-02</span>
+            <span class="bento-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <h3>Centros de apoyo</h3><p>Sedes y puntos de acopio con ubicación, capacidad instalada y responsable asignado.</p></article>
+          <article class="bento-card glass reveal reveal-d2"><span class="bento-code">RF-03</span>
+            <span class="bento-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></span>
+            <h3>Inventario</h3><p>Existencias en tiempo real por centro y tipo de insumo, con alertas al caer bajo el umbral.</p></article>
+          <article class="bento-card glass reveal reveal-d3"><span class="bento-code">RF-04</span>
+            <span class="bento-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></span>
+            <h3>Donaciones / Entradas</h3><p>Ingreso de insumos con origen, cantidad, tipo y fecha; actualiza el inventario al confirmar.</p></article>
+          <article class="bento-card span2 glass sheen reveal"><span class="bento-code">RF-05 · RF-06</span>
+            <span class="bento-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></span>
+            <h3>Distribución / Salidas</h3><p>Listas de carga a partir de solicitudes priorizadas, notificación instantánea a bodega y conducción, confirmación de salida y descuento de stock en tiempo real.</p></article>
+          <article class="bento-card glass reveal reveal-d1"><span class="bento-code">RF-07</span>
+            <span class="bento-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <h3>Beneficiarios · SIGA</h3><p>Padrón caracterizado de personas y comunidades receptoras de la ayuda.</p></article>
+          <article class="bento-card glass reveal reveal-d2"><span class="bento-code">RF-08</span>
+            <span class="bento-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></span>
+            <h3>Priorización · Resilia</h3><p>Matriz de urgencias y criticidad; clasificación automática con confirmación humana.</p></article>
+          <article class="bento-card span2 glass sheen reveal reveal-d3"><span class="bento-code">RF-09 · RF-10</span>
+            <span class="bento-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span>
+            <h3>Reportes y administración</h3><p>Trazabilidad e indicadores de gestión exportables en PDF y Excel para rendición de cuentas, con autenticación por roles y permisos diferenciados por módulo.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FLUJO ================= -->
+    <section class="section" id="flujo">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Flujo crítico · CU-03</span>
+          <h2>De la solicitud al despacho en cuatro pasos.</h2>
+          <p>Toca cada paso para ver qué ocurre dentro del sistema. El mismo flujo que ejecuta el prototipo, sin cajas negras.</p>
+        </div>
+        <div class="flow-demo glass glass-rim reveal">
+          <div class="flow-steps" role="tablist" aria-label="Pasos del flujo de despacho">
+            <button class="flow-step" role="tab" aria-selected="true"><span class="n">PASO 01</span><b>Consolidación</b><span>Lista de carga desde solicitudes priorizadas</span></button>
+            <button class="flow-step" role="tab" aria-selected="false"><span class="n">PASO 02</span><b>Notificación</b><span>Alerta instantánea a bodega y conducción</span></button>
+            <button class="flow-step" role="tab" aria-selected="false"><span class="n">PASO 03</span><b>Preparación y carga</b><span>Alistamiento contra la lista en dispositivo</span></button>
+            <button class="flow-step" role="tab" aria-selected="false"><span class="n">PASO 04</span><b>Confirmación</b><span>Salida autorizada y stock descontado</span></button>
+          </div>
+          <div class="flow-panel" id="flowPanel" role="tabpanel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MÉTRICAS ================= -->
+    <section class="section" id="metricas" style="padding-top:0">
+      <div class="container">
+        <div class="stats">
+          <article class="stat glass reveal"><b class="grad-text" data-count="99" data-suffix="%">0</b><span>Disponibilidad objetivo mensual (RNF-01)</span></article>
+          <article class="stat glass reveal reveal-d1"><b class="grad-text" data-count="2" data-suffix=" s">0</b><span>Latencia máxima percibida en stock y alertas (RNF-03)</span></article>
+          <article class="stat glass reveal reveal-d2"><b class="grad-text" data-count="2" data-suffix=" h">0</b><span>Capacitación máxima para operar flujos críticos (RNF-02)</span></article>
+          <article class="stat glass reveal reveal-d3"><b class="grad-text" data-count="10" data-suffix="/10">0</b><span>Casos de prueba funcional ejecutados y aprobados</span></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= METODOLOGÍA ================= -->
+    <section class="section" id="metodologia">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Ingeniería de software</span>
+          <h2>Construido con RUP, modelado en UML 2.5.</h2>
+          <p>Cuatro fases cerradas por hitos de control: ninguna línea de código de producción antes de validar la arquitectura que la soporta.</p>
+        </div>
+        <div class="rup">
+          <article class="rup-card glass reveal"><span class="phase">Fase 1 · Semanas 1–2</span><h3>Inicio</h3><p>Visión compartida, cinco perfiles de actor, ocho módulos de alcance y riesgos iniciales. Hito LCO aprobado.</p><span class="pill pill-ok weeks">LCO ✓</span></article>
+          <article class="rup-card glass reveal reveal-d1"><span class="phase">Fase 2 · Semanas 3–6</span><h3>Elaboración</h3><p>10 RF y 6 RNF trazables, casos de uso detallados, diagramas de clases y ER, algoritmo Resilia y prototipos validados.</p><span class="pill pill-ok weeks">LCA ✓</span></article>
+          <article class="rup-card glass reveal reveal-d2"><span class="phase">Fase 3 · Semanas 7–12</span><h3>Construcción</h3><p>Tres iteraciones: módulos base, módulos de registro y módulos de despacho, cada una con pruebas unitarias y de integración.</p><span class="pill pill-ok weeks">IOC ✓</span></article>
+          <article class="rup-card glass reveal reveal-d3"><span class="phase">Fase 4 · Semanas 13–16</span><h3>Transición</h3><p>Piloto en un centro de apoyo, capacitación con manual breve, pruebas de aceptación y entrega documentada.</p><span class="pill pill-ok weeks">LIB ✓</span></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EQUIPO ================= -->
+    <section class="section" id="equipo">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Equipo</span>
+          <h2>Desarrollo Formal de Software.</h2>
+          <p>Universidad del Pacífico · Ingeniería de Sistemas · Buenaventura, 2026. Presentado al docente Daniel Hurtado Bustos.</p>
+        </div>
+        <div class="team">
+          <article class="team-card glass glass-rim reveal"><span class="avatar">CG</span><h3>Cesar Alberto Grain Agudelo</h3><p class="role">Análisis y desarrollo · Inventario y despachos</p><p>Modelado de casos de uso, flujos críticos de entrada y salida de inventario y trazabilidad de movimientos.</p></article>
+          <article class="team-card glass glass-rim reveal reveal-d1"><span class="avatar">SN</span><h3>Sarly Samira Naranjo Tello</h3><p class="role">Módulo SIGA · Caracterización</p><p>Padrón de beneficiarios, caracterización de vulnerabilidad y asociación de solicitudes de ayuda.</p></article>
+          <article class="team-card glass glass-rim reveal reveal-d2"><span class="avatar">JO</span><h3>Jhon Leyner Orobio Paredes</h3><p class="role">Módulo Resilia · Priorización</p><p>Algoritmo de clasificación por urgencia y criticidad, matriz de revisión humana y notificaciones.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="cta-final glass glass-rim reveal">
+          <h2>La operación humanitaria merece <span class="grad-text">infraestructura seria.</span></h2>
+          <p>Explora el prototipo funcional con datos de demostración: ocho módulos, cinco perfiles y el flujo donación → priorización → despacho → reporte completo.</p>
+          <div class="hero-actions" style="justify-content:center;margin-bottom:0">
+            <a class="btn btn-primary" href="login.html">Entrar al prototipo</a>
+            <a class="btn btn-ghost" href="#modulos">Revisar módulos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="nav-logo" href="#top" aria-label="SICA — inicio">
+            <svg width="112" height="28" viewBox="0 0 128 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SICA">
+              <defs><linearGradient id="lgf" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5EEAD4"/><stop offset=".5" stop-color="#2DD4BF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+              <path d="M16 1.5 L29 8.5 V23.5 L16 30.5 L3 23.5 V8.5 Z" fill="url(#lgf)" fill-opacity=".14" stroke="url(#lgf)" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M16 1.5 L16 30.5 M3 8.5 L16 15.8 L29 8.5" stroke="url(#lgf)" stroke-width="1.1" stroke-opacity=".55" fill="none"/>
+              <circle cx="16" cy="15.8" r="2.1" fill="#5EEAD4"/>
+              <text x="38" y="21.6" font-family="Inter,'Segoe UI',system-ui,sans-serif" font-size="15" font-weight="700" letter-spacing=".14em" fill="#F4FAF9">SICA</text>
+            </svg>
+          </a>
+          <p>Sistema de Inventario de Centros de Apoyo. Prototipo de ingeniería de software para la gestión integrada de ayuda humanitaria.</p>
+        </div>
+        <nav aria-label="Módulos"><h4>Plataforma</h4><ul>
+          <li><a href="#modulos">Panel de control</a></li><li><a href="#modulos">Inventario</a></li>
+          <li><a href="#modulos">Donaciones</a></li><li><a href="#flujo">Distribución</a></li>
+          <li><a href="#ecosistema">SIGA · Beneficiarios</a></li><li><a href="#ecosistema">Resilia · Priorización</a></li>
+        </ul></nav>
+        <nav aria-label="Proyecto"><h4>Proyecto</h4><ul>
+          <li><a href="#problema">Planteamiento</a></li><li><a href="#metodologia">Metodología RUP</a></li>
+          <li><a href="#metricas">Indicadores</a></li><li><a href="#equipo">Equipo</a></li>
+        </ul></nav>
+        <nav aria-label="Acceso"><h4>Acceso</h4><ul>
+          <li><a href="login.html">Iniciar sesión</a></li><li><a href="login.html">Credenciales de demostración</a></li>
+          <li><a href="app/index.html">Ir a la aplicación</a></li>
+        </ul></nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Proyecto SICA · Universidad del Pacífico, Buenaventura.</span>
+        <span>Hecho con cristal ahumado · Inter + JetBrains Mono · Sin dependencias externas de runtime.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/landing.js"></script>
+</body>
+</html>

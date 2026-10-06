@@ -1,0 +1,13 @@
+{
+  "name": "SICA — Sistema de Inventario de Centros de Apoyo",
+  "short_name": "SICA",
+  "description": "Gestión integrada de inventarios, beneficiarios y despacho de ayuda humanitaria en centros de apoyo.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#06080b",
+  "theme_color": "#06080b",
+  "lang": "es-CO",
+  "icons": [
+    { "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de control · SICA — Sistema de Inventario de Centros de Apoyo</title>
+  <meta name="description" content="Visión global de existencias, alertas de umbral y actividad operativa de los centros de apoyo en tiempo real.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#06080b">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/app.css">
+</head>
+<body class="app" data-page="dashboard">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="ambient" aria-hidden="true"><span class="orb orb-1"></span><span class="orb orb-2"></span><span class="orb orb-3"></span></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scrim" id="scrim"></div>
+  <div class="main">
+    <main class="content" id="contenido" tabindex="-1"></main>
+  </div>
+  <div id="toasts" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modal"></div>
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

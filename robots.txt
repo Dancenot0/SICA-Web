@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /app/
+Disallow: /login.html
+
+Sitemap: https://sica.example.org/sitemap.xml
